@@ -9,7 +9,7 @@ CREATE TABLE converted_files (
     original_file_id INT,
     file_data LONGBLOB,
     file_type ENUM('wav', 'rar'),
-    FOREIGN KEY (original_file_id) REFERENCES Files(file_id)
+    FOREIGN KEY (original_file_id) REFERENCES files(file_id)
 );
 
 CREATE TABLE artists (
@@ -39,16 +39,16 @@ CREATE TABLE songs (
     sample_rate INT,
     song_title VARCHAR(100),
     release_date DATE,
-    FOREIGN KEY (file_id) REFERENCES Files(file_id),
-    FOREIGN KEY (album_id) REFERENCES Albums(album_id),
-    FOREIGN KEY (genre_id) REFERENCES Genres(genre_id)
+    FOREIGN KEY (file_id) REFERENCES files(file_id),
+    FOREIGN KEY (album_id) REFERENCES albums(album_id),
+    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
 );
 
 CREATE TABLE songs_artists (
     song_id INT,
     artist_id INT,
     PRIMARY KEY (song_id, artist_id),
-    FOREIGN KEY (song_id) REFERENCES Songs(song_id),
-    FOREIGN KEY (artist_id) REFERENCES Authors(artist_id)
+    FOREIGN KEY (song_id) REFERENCES songs(song_id),
+    FOREIGN KEY (artist_id) REFERENCES artists(artist_id)
 );
 
