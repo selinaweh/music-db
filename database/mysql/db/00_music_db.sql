@@ -50,7 +50,7 @@ CREATE TABLE songs_artists
 (
     song_id   INT,
     artist_id INT,
-    PRIMARY KEY (song_id, artist_id) AUTO_INCREMENT,
+    PRIMARY KEY (song_id, artist_id),
     FOREIGN KEY (song_id) REFERENCES songs (song_id),
     FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 );
