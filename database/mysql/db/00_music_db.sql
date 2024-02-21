@@ -30,6 +30,7 @@ CREATE TABLE albums
     album_id   INT PRIMARY KEY AUTO_INCREMENT,
     album_name VARCHAR(100),
     artist_id  INT
+        FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
 );
 
 CREATE TABLE songs
