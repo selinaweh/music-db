@@ -1,7 +1,8 @@
-CREATE TABLE files(
-                      file_id   INT PRIMARY KEY AUTO_INCREMENT,
-                      file_data LONGBLOB,
-                      file_type ENUM('mp3')
+CREATE TABLE files
+(
+    file_id   INT PRIMARY KEY AUTO_INCREMENT,
+    file_data LONGBLOB,
+    file_type ENUM('mp3')
 );
 
 CREATE TABLE converted_files
@@ -16,13 +17,13 @@ CREATE TABLE converted_files
 CREATE TABLE artists
 (
     artist_id   INT PRIMARY KEY AUTO_INCREMENT,
-    artist_name VARCHAR(100)
+    artist_name VARCHAR(100) UNIQUE
 );
 
 CREATE TABLE genres
 (
     genre_id   INT PRIMARY KEY AUTO_INCREMENT,
-    genre_name VARCHAR(100)
+    genre_name VARCHAR(100) UNIQUE
 );
 
 CREATE TABLE albums
