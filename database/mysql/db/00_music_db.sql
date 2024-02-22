@@ -38,7 +38,7 @@ CREATE TABLE songs
     album_id     INT,
     genre_id     INT,
     file_id      INT,
-    duration     INT,
+    duration     DOUBLE,
     title        VARCHAR(100),
     release_date DATE,
     FOREIGN KEY (file_id) REFERENCES files (file_id),
