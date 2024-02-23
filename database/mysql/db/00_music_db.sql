@@ -2,6 +2,7 @@ CREATE TABLE files
 (
     file_id   INT PRIMARY KEY AUTO_INCREMENT,
     file_data LONGBLOB,
+    file_name VARCHAR(100),
     file_type ENUM('mp3')
 );
 
