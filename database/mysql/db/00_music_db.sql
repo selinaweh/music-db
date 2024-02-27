@@ -35,13 +35,13 @@ CREATE TABLE albums
 
 CREATE TABLE songs
 (
-    song_id      INT PRIMARY KEY AUTO_INCREMENT,
-    album_id     INT,
-    genre_id     INT,
-    file_id      INT,
-    duration     DOUBLE,
-    title        VARCHAR(100),
-    release_date DATE,
+    song_id  INT PRIMARY KEY AUTO_INCREMENT,
+    album_id INT,
+    genre_id INT,
+    file_id  INT,
+    duration DOUBLE,
+    title    VARCHAR(100),
+    release_date YEAR,
     FOREIGN KEY (file_id) REFERENCES files (file_id),
     FOREIGN KEY (album_id) REFERENCES albums (album_id),
     FOREIGN KEY (genre_id) REFERENCES genres (genre_id)
