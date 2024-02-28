@@ -11,7 +11,8 @@ CREATE TABLE converted_files
     conversion_id    INT PRIMARY KEY AUTO_INCREMENT,
     original_file_id INT,
     file_data        LONGBLOB,
-    file_type        ENUM('wav', 'rar'),
+    file_type        ENUM('wav', 'ogg', 'flac'),
+    file_name        VARCHAR(100),
     FOREIGN KEY (original_file_id) REFERENCES files (file_id)
 );
 
